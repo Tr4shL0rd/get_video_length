@@ -1,3 +1,7 @@
+# Files and folders used for testing
+video_files/
+script.py
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
