@@ -2,23 +2,31 @@
 
 """Tests for `get_video_length` package."""
 
-import pytest
+#import pytest
 
 
-from get_video_length import get_video_length
+from get_video_length.get_video_length import gvl
 
 
-@pytest.fixture
-def response():
-    """Sample pytest fixture.
+# normal_url = "https://www.youtube.com/watch?v=H0dqSl3epvg"
 
-    See more at: http://doc.pytest.org/en/latest/fixture.html
-    """
-    # import requests
-    # return requests.get('https://github.com/audreyr/cookiecutter-pypackage')
+# @pytest.fixture
+# def response(self):
+#     """Sample pytest fixture.
+
+#     See more at: http://doc.pytest.org/en/latest/fixture.html
+#     """
+#     # import requests
+#     # return requests.get('https://github.com/audreyr/cookiecutter-pypackage')
 
 
-def test_content(response):
-    """Sample pytest test function with the pytest fixture as an argument."""
-    # from bs4 import BeautifulSoup
-    # assert 'GitHub' in BeautifulSoup(response.content).title.string
+# def test_content(self,response):
+#     """Sample pytest test function with the pytest fixture as an argument."""
+#     # from bs4 import BeautifulSoup
+#     # assert 'GitHub' in BeautifulSoup(response.content).title.string
+
+
+def test_url_validty():
+    assert gvl._check_online_video_id_validity(
+        "https://www.youtube.com/watch?v=H0dqSl3epvg"
+    )
